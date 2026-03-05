@@ -17,13 +17,13 @@ import { useStoreUser } from "@/hooks/use-store-user";
 import { Building, Plus, Ticket, User } from "lucide-react";
 const Header = () => {
   const { isLoading } = useStoreUser();
-  const [showUpgradeModal, setShowUpgradeModal] = useState();
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   return (
     <>
       <nav className="fixed top-0 right-0 left-0 bg-background/80 backdrop-blur-xl z-20">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex ietms-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* logo */}
-          <Link href="/" className="felx items-center">
+          <Link href="/" className="flex items-center">
             <Image
               src="/spott.png"
               alt="Spot Logo"
@@ -42,12 +42,12 @@ const Header = () => {
             <Button
               variant={"ghost"}
               size="sm"
-              onClick={() => setShowUpgradeModal}
+              onClick={() => setShowUpgradeModal(true)}
             >
               Pricing
             </Button>
             <Button variant={"ghost"} size="sm" asChild className={"mr-2"}>
-              <Link href="explore">Explore</Link>
+              <Link href="/explore">Explore</Link>
             </Button>
             <Authenticated>
               <Button size="sm" asChild className="flex gap-2 mr-4">
@@ -64,13 +64,14 @@ const Header = () => {
                     labelIcon={<Ticket size={16} />}
                     href="/my-tickets"
                   />
+
                   <UserButton.Link
                     label="My Events"
                     labelIcon={<Building size={16} />}
                     href="/my-events"
                   />
 
-                  <UserButton.Action label="manageAccount" />
+                  <UserButton.Action label="Manage account" open="profile" />
                 </UserButton.MenuItems>
               </UserButton>
             </Authenticated>
