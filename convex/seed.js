@@ -693,7 +693,7 @@ export const run = internalMutation({
         organizerName: organizer.name,
         startDate,
         endDate,
-        timezone: "Asia/Kolkata",
+        timeZone: "Asia/Kolkata",
         locationType: "physical",
         country: "India",
         registrationCount,

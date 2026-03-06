@@ -7,7 +7,7 @@ import { ThemeProvider } from "../components/theme-provider";
 import Header from "../components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
  import { dark } from '@clerk/themes'
-
+import {Toaster} from "sonner"
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
                     Made With ❤️ by Vinod
                   </div>
                 </footer>
+                <Toaster richColors />
               </main>
             </ConvexClientProvider>
           </ClerkProvider>
