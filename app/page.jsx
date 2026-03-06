@@ -15,7 +15,7 @@ export default function Home() {
             </span>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-[0.95] tracking-tight">Discover &<br/>
             create amazing 
-            <span className="bg-linear-to-r from-blue-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">Event.</span>
+            <span className="bg-linear-fto-r from-blue-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">Event.</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-lg  font-light">Whether you&apos; looking to attend an exciting concert or host a memorable party, we have the perfect platform for you.Join our community today!</p>
 
